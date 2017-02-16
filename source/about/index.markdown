@@ -1,14 +1,11 @@
 ---
 layout: page
-title: "Yurii Ishchenko"
-subtitle: "Optional Subtitle"
+title: "About"
 comments: false
 sharing: false
 footer: true
 sidebar: false
 ---
-<h2>About me</h2>
-
 <div id="in_touch" class="row">
     <div class="small-9 columns">
         <a href="http://stackoverflow.com/users/1904101/ishenkoyv">
@@ -23,3 +20,9 @@ sidebar: false
     </div>
 </div>
 
+<div style="margin-top: 20px;">
+    <p>Hi there, My name is Yurii Ishchenko. I'm PHP developer/architect.</p>
+
+    <p>This site is about web development, business processes, algorithms and other programming related things.
+I'm facing different professional challendges every day and there are no usually complete solutions to them. So here I put pieces of my experience to use them in future and maybe my thoutghts will be helpfull for somebody else.</p>
+</div>

@@ -1,41 +1,81 @@
-{% if site.fixed_navigation %}
-<div class="sticky" data-options="">
-{% endif %}
-  <nav class="top-bar" data-topbar>
+<div class="contain-to-grid{% if site.fixed_navigation %} sticky{% endif %}" data-options="">
+    <nav class="top-bar" data-topbar>
 
-    <!--Uncomment {{ site.title }} below if you would like a title area on the left side of the nav bar-->
+        <!--Uncomment {{ site.title }} below if you would like a title area on the left side of the nav bar-->
 
-    <ul class="title-area">
-        <li class="name">
-        </li>
-        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-    </ul>
+        <ul class="title-area">
+            <li class="name">
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
 
 
-    <section class="top-bar-section">
+        <section class="top-bar-section">
 
-      <ul class="main-navigation right">
+        <ul class="main-navigation left">
 
-          <li{% if page.url == '/index.html' %} class="active"{% endif %}><a href="{{ root_url }}/">Home</a></li>
+            <li{% if page.url == '/index.html' %} class="active"{% endif %}><a href="{{ root_url }}/">Home</a></li>
 
-          <li class="has-dropdown{% if page.url == '/no-sidebar/index.html' or page.url == '/no-sidebar/left-sidebar/index.html' or page.url == '/no-sidebar/right-sidebar/index.html' or page.url == '/no-sidebar/example-formatting/index.html' %} active{% endif %}">
-            <a href="{{ root_url }}/no-sidebar">No Sidebar Page</a>
+            <li class="has-dropdown{% if page.url == '/guidance/index.html' or page.url == '/guidance/dev-conventions/index.html' %} active{% endif %}">
+                <a href="{{ root_url }}/guidance">Guidances</a>
 
-            <ul class="dropdown">
-              <li><a href="{{ root_url }}/no-sidebar/left-sidebar">Left Sidebar Page</a></li>
-              <li><a href="{{ root_url }}/no-sidebar/right-sidebar">Right Sidebar Page</a></li>
-              <li><a href="{{ root_url }}/no-sidebar/example-formatting">Example Formatting</a></li>
-            </ul>
+                <ul class="dropdown">
+                <li><a href="{{ root_url }}/guidance/dev-conventions">Development Conventions</a></li>
+                </ul>
 
-          </li>
-          <li{% if page.url == '/about/index.html' %} class="active"{% endif %}><a href="{{ root_url }}/about">About</a></li>
+            </li>
 
-          <li{% if page.url == '/archives/index.html' %} class="active"{% endif %}><a href="{{ root_url }}/blog/archives">Archives</a></li>
+            <li class="has-dropdown{% if page.url == '/project/index.html' or page.url == '/project/pomm-cookbook/index.html' %} active{% endif %}">
+                <a href="{{ root_url }}/project">Projects</a>
 
-      </ul>
+                <ul class="dropdown">
+                <li><a href="{{ root_url }}/project/pomm-cookbook">Pomm cookbook</a></li>
+                </ul>
 
-    </section>
-  </nav>
-{% if site.fixed_navigation %}
+            </li>
+
+            {% if false %}
+            <li class="has-dropdown{% if page.url == '/no-sidebar/index.html' or page.url == '/no-sidebar/left-sidebar/index.html' or page.url == '/no-sidebar/right-sidebar/index.html' or page.url == '/no-sidebar/example-formatting/index.html' %} active{% endif %}">
+                <a href="{{ root_url }}/no-sidebar">No Sidebar Page</a>
+
+                <ul class="dropdown">
+                <li><a href="{{ root_url }}/no-sidebar/left-sidebar">Left Sidebar Page</a></li>
+                <li><a href="{{ root_url }}/no-sidebar/right-sidebar">Right Sidebar Page</a></li>
+                <li><a href="{{ root_url }}/no-sidebar/example-formatting">Example Formatting</a></li>
+                </ul>
+
+            </li>
+            {% endif %}
+
+            <li{% if page.url == '/blog/categories/index.html' %} class="active"{% endif %}><a href="{{ root_url }}/blog/categories">Categories</a></li>
+
+            <li{% if page.url == '/archives/index.html' %} class="active"{% endif %}><a href="{{ root_url }}/blog/archives">Archives</a></li>
+
+            <li{% if page.url == '/about/index.html' %} class="active"{% endif %}><a href="{{ root_url }}/about">About</a></li>
+        </ul>
+
+        <ul class="main-navigation right">
+            <li>
+                <ul class="subscription" data-subscription="rss{% if site.subscribe_email %} email{% endif %}">
+                    <li><a href="{{ site.subscribe_rss }}" rel="subscribe-rss" title="subscribe via RSS"><i class="fa fa-rss fa-large"></i> RSS</a></li>
+                    {% if site.subscribe_email %}                                                 
+                        <li><a href="{{ site.subscribe_email }}" rel="subscribe-email" title="subscribe via email">Email</a></li>
+                    {% endif %}                                                                                                  
+                </ul>     
+            </li>
+            <li class="has-form">
+                <div class="row collapse">
+                    {% if site.simple_search %}                                                                 
+                    <div class="large-8 small-9 columns">
+                        <form action="{{ site.simple_search }}" method="get">                           
+                            <input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}" />
+                            <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+                        </form>                                                                                   
+                    </div>
+                    {% endif %}  
+                </div>
+            </li>
+        </ul>
+        </section>
+    </nav>
 </div>
-{% endif %}
