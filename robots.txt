@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://ishenkoyv.github.io/sitemap.xml 

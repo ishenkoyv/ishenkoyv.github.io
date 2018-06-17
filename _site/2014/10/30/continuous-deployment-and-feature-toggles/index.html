@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Continuous Deployment and Feature Toggles</title>
+    <meta name="description" content="Continuous Delivery vs Continuous DeploymentContinuous Delivery includes automatic tests, code quality and errors checks. When all stages are passed code is ...">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="http://localhost:4000/2014/10/30/continuous-deployment-and-feature-toggles/">
+    <link rel="alternate" type="application/rss+xml" title="Yurii Ishchenko" href="http://localhost:4000/feed.xml ">
+
+
+
+    <script>
+    // google analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-15570617-15', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+    "HTML-CSS": {
+      linebreaks: { automatic: true, width: "container" }
+    }
+});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</head>
+
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand">Yurii Ishchenko</a>
+        <small>Personal Blog</small>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            <i class="fa fa-tags"></i>Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/about/">
+                        
+                            <i class="fa fa-heart"></i>About
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix" post>
+    <div class="left">
+        <h1>Continuous Deployment and Feature Toggles</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2014-10-30
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Continuous Delivery" title="Category: Continuous Delivery" rel="category">Continuous Delivery</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+
+            <div class="label-card">
+            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+            </div>
+
+        </div>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <h2 id="continuous-delivery-vs-continuous-deployment">Continuous Delivery vs Continuous Deployment</h2>
+
+<p>Continuous Delivery includes automatic tests, code quality and errors checks. When all stages are passed code is released to production accorgin to business requirements. So business dictates when a build is deployed.</p>
+
+<p><strong>Drawbacks of continuous delivery approach</strong>:</p>
+
+<ul>
+  <li>scheduled downtimes</li>
+  <li>during “silence period” of no release we can cumulate a lot of changes which will be hard to release. This increase release time and possibility of random bugs on production</li>
+  <li>all changes appear to all customers immidiately and if some bug exists we will get storm of calls and emails and a very little time to rollback changes/make hotfix</li>
+</ul>
+
+<p>During release process you have to configure all new futures correctly and sometimes configuration error is catched too late.</p>
+
+<p>Imagegine we found some problem with released code. So what can cause it as all changes were tested and pass all delivery stages including automatical and manual testing?</p>
+
+<p>Here some <strong>examples of questions that can arise</strong>:</p>
+
+<ul>
+  <li>Is bug in one of numerous check-ins?</li>
+  <li>Missing unit tests?</li>
+  <li>Missing automated UA tests?</li>
+  <li>Missing manual UA tests?</li>
+  <li>Data out of sync?</li>
+  <li>Server configuration out of sync?</li>
+  <li>Capacity vs current load?</li>
+  <li>Deployment script?</li>
+</ul>
+
+<p><!--more--></p>
+
+<p><strong>Continuous Deployment difference to Continuous delivery</strong></p>
+
+<ul>
+  <li>every passing build is deployd to production (e.g. +30 deploys per day)</li>
+  <li>constantly integrating into production</li>
+  <li>all enhancements are gated by Config Flags (“dark” releases). Turning flags on, off, user list, 0-100%</li>
+  <li>validate in production, hidden from public</li>
+</ul>
+
+<p>Software Deploy ≠ Product Launch</p>
+
+<h2 id="levels-of-code-delivery-and-releases">Levels of code delivery and releases</h2>
+
+<p><strong>CD 100-200 LEVELS</strong></p>
+
+<ul>
+  <li>CI environment for automated tests</li>
+  <li>Commiting to trunk</li>
+  <li>Branching in code</li>
+  <li>Config flags (a.k.a feature flags)</li>
+  <li>Metrics and alerting</li>
+  <li>Automatic deploy script</li>
+</ul>
+
+<p><strong>CD 300 LEVEL</strong></p>
+
+<ul>
+  <li>Deploys vs releases</li>
+  <li>Decoupled systems, schema changes</li>
+  <li>Integration and Operations</li>
+</ul>
+
+<h2 id="dark-launching">Dark Launching</h2>
+
+<p>Term dark launching was coined by Facebook engineering team to simulate the new features in production environment well before release.</p>
+
+<blockquote>
+  <p>The secret for going from zero to seventy million users overnight is to avoid doing it all in one fell swoop. We chose to simulate the impact of many real users hitting many machines by means of a “dark launch” period in which Facebook pages would make connections to the chat servers, query for presence information and simulate message sends without a single UI element drawn on the page. With the “dark launch” bugs fixed, we hope that you enjoy Facebook Chat now that the UI lights have been turned on.</p>
+</blockquote>
+
+<h2 id="feature-toggles">Feature Toggles</h2>
+
+<p><strong>Feature toggles are used for dark Launching or phased rollout</strong>. Once latest version of application deployed we can toggle and expose a set of features to selected or all end-users.</p>
+
+<p><strong>Feature toggles can be also used for</strong>,</p>
+
+<ul>
+  <li>for avoiding branching and merging</li>
+  <li>experimenting such as A/B tests</li>
+  <li>putting unfinished code in production</li>
+  <li>reducing risk associated with large change</li>
+  <li>turning a resources heavy feature OFF in high load conditions</li>
+</ul>
+
+<p>According to Ross Harmes @ Flickr</p>
+
+<blockquote>
+  <p>Feature flags and flippers mean we don’t have to do merges, and that all code (no matter how far it is from being released) is integrated as soon as it is committed. Deploys become smaller and more frequent; this leads to bugs that are easier to fix, since we can catch them earlier and the amount of changed code is minimized.</p>
+</blockquote>
+
+<p>Martin Fowler’s explanation of feature toggle,</p>
+
+<blockquote>
+  <p>The basic idea is to have a configuration file that defines a bunch of toggles for various features you have pending. The running application then uses these toggles in order to decide whether or not to show the new feature.</p>
+</blockquote>
+
+<p><strong>Feature toggles in PHP</strong></p>
+
+<ul>
+  <li><a href="https://github.com/qandidate-labs/qandidate-toggle">Qandidate toggle</a></li>
+  <li><a href="http://github.com/marekkalnik/FeatureToggleBundle">FeatureToggle (Symfony)</a></li>
+</ul>
+
+<p><strong>Feature toggles in Ruby</strong></p>
+
+<ul>
+  <li><a href="http://github.com/pda/flip">Flip</a></li>
+  <li><a href="http://github.com/jamesgolick/rollout">Rollout</a></li>
+  <li><a href="http://github.com/jamesgolick/degrade">Degrade</a></li>
+</ul>
+
+<p><strong>Feature toggles in Python</strong></p>
+
+<ul>
+  <li><a href="http://github.com/disqus/gargoyle">Gargoyle (Django)</a></li>
+  <li><a href="http://github.com/jsocol/django-waffle">Django Waffle (Django)</a></li>
+  <li><a href="https://github.com/disqus/nexus">Nexus admin</a></li>
+</ul>
+
+        </article>
+        <hr>
+
+        
+        
+            
+            
+        
+            
+            
+        
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
+    </div>
+    <div class="nex">
+
+        
+        <p><strong>下一篇</strong> <a href="/2014/11/02/version-naming-convention-version-numbering/">Version naming convention (version numbering)</a></p>
+        
+    </div>
+</div>
+
+
+        <h2 id="comments">Comments</h2>
+        
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function() {
+        this.page.url = 'http://localhost:4000/2014/10/30/continuous-deployment-and-feature-toggles/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2014/10/30/continuous-deployment-and-feature-toggles/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+            s = d.createElement('script');
+
+        s.src = '//ishenkoyvgithubio.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                <ul id="content-side" class="content-ul">
+                    
+                    <li><a href="#comments">Comments</a></li>
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+</div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+<script src="/js/pageContent.js " charset="utf-8"></script>
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <p class="description">
+            
+        </p>
+        <p class="contact">
+            Contact me at: 
+            <a href="https://github.com/ishenkoyv" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>        
+            <a href="https://www.linkedin.com/in/yurii-ishchenko-3610494a" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>  
+        </p>
+        <p class="power">
+            <span>
+                Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.
+            </span>
+            <span>
+                Theme designed by <a href="https://github.com/Gaohaoyang">HyG</a>.
+            </span>
+        </p>
+    </div>
+</footer>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <div class="back-to-top">
+    <a href="#top" data-scroll>
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+  </body>
+
+</html>

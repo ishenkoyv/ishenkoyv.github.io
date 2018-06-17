@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yurii Ishchenko</title>
+    <description></description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 18 Jun 2018 00:06:58 +0300</pubDate>
+    <lastBuildDate>Mon, 18 Jun 2018 00:06:58 +0300</lastBuildDate>
+    <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>Coding Standards</title>
+        <description>Coding standard is important part of code quality. It’s important as improves code readability, decrease code review time and helps found errors in code.
+
+That’s why such group as &lt;a href=&quot;http://www.php-fig.org/&quot;&gt;FIG&lt;/a&gt; exists. The idea behind the group is for project representatives to talk about the commonalities between our projects and find ways we can work together.
+
+As most of projects use different coding standards currenly a lot of them are migrating to PRS-2.
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/squizlabs/PHP_CodeSniffer&quot;&gt;PHP CodeSniffer&lt;/a&gt; to check code agains rulesets&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/fabpot/PHP-CS-Fixer&quot;&gt;PHP CS Fixer&lt;/a&gt; to automate fixing of standards issues (PSR-1 and PSR-2 compatible)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;php-codesniffer&quot;&gt;PHP CodeSniffer&lt;/h2&gt;
+
+&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
+
+To install phpcs via pear
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pear install PHP_CodeSniffer
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;configuration&quot;&gt;Configuration&lt;/h3&gt;
+
+To set prefered coding standard
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;phpcs --config-set default_standard PSR2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+Check for installed coding standards
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;phpcs -i
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+Coding standards location
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pear config-show | grep php_dir
+ls -la /path/to/pear/PHP/CodeSniffer/Standards/PSR2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+Setting the installed standard paths
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ phpcs --config-set installed_paths /path/to/one,/path/to/two
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+Hiding warnings by default
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;phpcs --config-set show_warnings 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;php-cs-fixer&quot;&gt;PHP CS Fixer&lt;/h2&gt;
+
+There are good documentation at &lt;a href=&quot;http://cs.sensiolabs.org/&quot;&gt;Sensiolab site&lt;/a&gt;.
+
+For vim I use &lt;a href=&quot;https://github.com/stephpy/vim-php-cs-fixer&quot;&gt;vim plugin&lt;/a&gt;.
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let g:php_cs_fixer_path = &quot;~/Bin/php-cs-fixer.phar&quot;
+Bundle 'stephpy/vim-php-cs-fixer'
+nnoremap &amp;lt;silent&amp;gt;&amp;lt;leader&amp;gt;f :call PhpCsFixerFixFile()&amp;lt;CR&amp;gt;e:&amp;lt;CR&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;coding-standards-customization&quot;&gt;Coding Standards customization&lt;/h2&gt;
+
+As there are a lot of legasy code and it’s hard change all codebase in one moment to PSR-2 you can modify coding standards to your needs.
+
+&lt;a href=&quot;https://github.com/ishenkoyv/PSR2IYV&quot;&gt;My PSR-2 modified standard&lt;/a&gt; includes changes to support php &amp;lt;5.3 projects (like Zend Framework 1.12), ignore errors for methods chaining etc.
+
+&lt;a href=&quot;http://ianty.com/CodeSniffer_1.3.0.html&quot;&gt;CodeSniffer Cheat Sheet&lt;/a&gt; can be helpfull for modification coding standards to fit your needs.
+</description>
+        <pubDate>Tue, 04 Nov 2014 22:59:51 +0200</pubDate>
+        <link>http://localhost:4000/2014/11/04/coding-standards/</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/11/04/coding-standards/</guid>
+        
+        
+        <category>Development Conventions</category>
+        
+        <category>Code Quality</category>
+        
+      </item>
+    
+      <item>
+        <title>Version naming convention (version numbering)</title>
+        <description>According to development methodology you use periodicaly code changes are delivered to production and you make release.
+Release is point in time which you have to freeze for history. With git you can add tag for this, e.g.
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git tag -a v0.0.1 -m &quot;Release v0.0.1&quot;
+git push origin v0.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+What do all this digits mean?
+
+&lt;h2 id=&quot;version-naming-convention&quot;&gt;Version naming convention&lt;/h2&gt;
+I use &lt;a href=&quot;http://semver.org/&quot;&gt;semantic versioning&lt;/a&gt;. This approach is popular (&lt;a href=&quot;https://developers.google.com/java-dev-tools/wintester/html/installation/version_naming_convention&quot;&gt;google&lt;/a&gt;, &lt;a href=&quot;https://wiki.eclipse.org/Version_Numbering&quot;&gt;eclipse&lt;/a&gt; etc.) and http://semver.org/.
+So version number contains 3 segments (versions): major, minor, patch:
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;v0.0.1
+^ ^ ^
+| | |
+| | +--- Patch verion (Minor changes, bugfixes etc)
+| +----- Minor version (Added new huge functionality)
++------- Major version (Incompatible API changes)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+When the major segment is changed the minor and patch segments are reset to 0.
+When the minor segment is changed the patch segment is reset to 0.
+
+So your releases list will look something like that
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git tag -l
+v0.0.1
+v0.0.2
+v0.0.3
+v0.1.0
+v0.1.1
+v1.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;upgrading-the-software-version-on-applying-a-hotfix&quot;&gt;Upgrading the software version on applying a hotfix&lt;/h2&gt;
+We leave in not an ideal world and sometimes event if your changes are good tested critical bugs appear on production. Such sort of critical bugs should be fixed as fast as possible, so you don’t have time to go through all development cycle stages. But this is not a reason to make manual changes on production.
+
+If you made appropriate changes to fix bug and commited changes to git (and to production) you should reflect this moment in versions history, i.e. add tag.
+To indicate hotfixes in version name I use patch segment alphabetic suffix
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;v0.0.1a
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sun, 02 Nov 2014 22:01:11 +0200</pubDate>
+        <link>http://localhost:4000/2014/11/02/version-naming-convention-version-numbering/</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/11/02/version-naming-convention-version-numbering/</guid>
+        
+        
+        <category>Development Conventions</category>
+        
+      </item>
+    
+      <item>
+        <title>Continuous Deployment and Feature Toggles</title>
+        <description>&lt;h2 id=&quot;continuous-delivery-vs-continuous-deployment&quot;&gt;Continuous Delivery vs Continuous Deployment&lt;/h2&gt;
+
+Continuous Delivery includes automatic tests, code quality and errors checks. When all stages are passed code is released to production accorgin to business requirements. So business dictates when a build is deployed.
+
+&lt;strong&gt;Drawbacks of continuous delivery approach&lt;/strong&gt;:
+
+&lt;ul&gt;
+  &lt;li&gt;scheduled downtimes&lt;/li&gt;
+  &lt;li&gt;during “silence period” of no release we can cumulate a lot of changes which will be hard to release. This increase release time and possibility of random bugs on production&lt;/li&gt;
+  &lt;li&gt;all changes appear to all customers immidiately and if some bug exists we will get storm of calls and emails and a very little time to rollback changes/make hotfix&lt;/li&gt;
+&lt;/ul&gt;
+
+During release process you have to configure all new futures correctly and sometimes configuration error is catched too late.
+
+Imagegine we found some problem with released code. So what can cause it as all changes were tested and pass all delivery stages including automatical and manual testing?
+
+Here some &lt;strong&gt;examples of questions that can arise&lt;/strong&gt;:
+
+&lt;ul&gt;
+  &lt;li&gt;Is bug in one of numerous check-ins?&lt;/li&gt;
+  &lt;li&gt;Missing unit tests?&lt;/li&gt;
+  &lt;li&gt;Missing automated UA tests?&lt;/li&gt;
+  &lt;li&gt;Missing manual UA tests?&lt;/li&gt;
+  &lt;li&gt;Data out of sync?&lt;/li&gt;
+  &lt;li&gt;Server configuration out of sync?&lt;/li&gt;
+  &lt;li&gt;Capacity vs current load?&lt;/li&gt;
+  &lt;li&gt;Deployment script?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;strong&gt;Continuous Deployment difference to Continuous delivery&lt;/strong&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;every passing build is deployd to production (e.g. +30 deploys per day)&lt;/li&gt;
+  &lt;li&gt;constantly integrating into production&lt;/li&gt;
+  &lt;li&gt;all enhancements are gated by Config Flags (“dark” releases). Turning flags on, off, user list, 0-100%&lt;/li&gt;
+  &lt;li&gt;validate in production, hidden from public&lt;/li&gt;
+&lt;/ul&gt;
+
+Software Deploy ≠ Product Launch
+
+&lt;h2 id=&quot;levels-of-code-delivery-and-releases&quot;&gt;Levels of code delivery and releases&lt;/h2&gt;
+
+&lt;strong&gt;CD 100-200 LEVELS&lt;/strong&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CI environment for automated tests&lt;/li&gt;
+  &lt;li&gt;Commiting to trunk&lt;/li&gt;
+  &lt;li&gt;Branching in code&lt;/li&gt;
+  &lt;li&gt;Config flags (a.k.a feature flags)&lt;/li&gt;
+  &lt;li&gt;Metrics and alerting&lt;/li&gt;
+  &lt;li&gt;Automatic deploy script&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;strong&gt;CD 300 LEVEL&lt;/strong&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Deploys vs releases&lt;/li&gt;
+  &lt;li&gt;Decoupled systems, schema changes&lt;/li&gt;
+  &lt;li&gt;Integration and Operations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;dark-launching&quot;&gt;Dark Launching&lt;/h2&gt;
+
+Term dark launching was coined by Facebook engineering team to simulate the new features in production environment well before release.
+
+&lt;blockquote&gt;
+  The secret for going from zero to seventy million users overnight is to avoid doing it all in one fell swoop. We chose to simulate the impact of many real users hitting many machines by means of a “dark launch” period in which Facebook pages would make connections to the chat servers, query for presence information and simulate message sends without a single UI element drawn on the page. With the “dark launch” bugs fixed, we hope that you enjoy Facebook Chat now that the UI lights have been turned on.
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;feature-toggles&quot;&gt;Feature Toggles&lt;/h2&gt;
+
+&lt;strong&gt;Feature toggles are used for dark Launching or phased rollout&lt;/strong&gt;. Once latest version of application deployed we can toggle and expose a set of features to selected or all end-users.
+
+&lt;strong&gt;Feature toggles can be also used for&lt;/strong&gt;,
+
+&lt;ul&gt;
+  &lt;li&gt;for avoiding branching and merging&lt;/li&gt;
+  &lt;li&gt;experimenting such as A/B tests&lt;/li&gt;
+  &lt;li&gt;putting unfinished code in production&lt;/li&gt;
+  &lt;li&gt;reducing risk associated with large change&lt;/li&gt;
+  &lt;li&gt;turning a resources heavy feature OFF in high load conditions&lt;/li&gt;
+&lt;/ul&gt;
+
+According to Ross Harmes @ Flickr
+
+&lt;blockquote&gt;
+  Feature flags and flippers mean we don’t have to do merges, and that all code (no matter how far it is from being released) is integrated as soon as it is committed. Deploys become smaller and more frequent; this leads to bugs that are easier to fix, since we can catch them earlier and the amount of changed code is minimized.
+&lt;/blockquote&gt;
+
+Martin Fowler’s explanation of feature toggle,
+
+&lt;blockquote&gt;
+  The basic idea is to have a configuration file that defines a bunch of toggles for various features you have pending. The running application then uses these toggles in order to decide whether or not to show the new feature.
+&lt;/blockquote&gt;
+
+&lt;strong&gt;Feature toggles in PHP&lt;/strong&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/qandidate-labs/qandidate-toggle&quot;&gt;Qandidate toggle&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://github.com/marekkalnik/FeatureToggleBundle&quot;&gt;FeatureToggle (Symfony)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;strong&gt;Feature toggles in Ruby&lt;/strong&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://github.com/pda/flip&quot;&gt;Flip&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://github.com/jamesgolick/rollout&quot;&gt;Rollout&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://github.com/jamesgolick/degrade&quot;&gt;Degrade&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;strong&gt;Feature toggles in Python&lt;/strong&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://github.com/disqus/gargoyle&quot;&gt;Gargoyle (Django)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://github.com/jsocol/django-waffle&quot;&gt;Django Waffle (Django)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/disqus/nexus&quot;&gt;Nexus admin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 30 Oct 2014 21:23:26 +0200</pubDate>
+        <link>http://localhost:4000/2014/10/30/continuous-deployment-and-feature-toggles/</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/10/30/continuous-deployment-and-feature-toggles/</guid>
+        
+        
+        <category>Continuous Delivery</category>
+        
+      </item>
+    
+  </channel>
+</rss>
