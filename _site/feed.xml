@@ -5,13 +5,96 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Jun 2018 00:06:58 +0300</pubDate>
-    <lastBuildDate>Mon, 18 Jun 2018 00:06:58 +0300</lastBuildDate>
-    <generator>Jekyll v3.8.3</generator>
+    <pubDate>Mon, 20 Jan 2020 18:52:44 +0200</pubDate>
+    <lastBuildDate>Mon, 20 Jan 2020 18:52:44 +0200</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Nomi Smart Home</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#необіхідність-розумного-будинку&quot; id=&quot;markdown-toc-необіхідність-розумного-будинку&quot;&gt;Необіхідність розумного будинку&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#про-продукцію-nomi&quot; id=&quot;markdown-toc-про-продукцію-nomi&quot;&gt;Про продукцію Nomi&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ціни-на-компоненти-nomi-smart-home&quot; id=&quot;markdown-toc-ціни-на-компоненти-nomi-smart-home&quot;&gt;Ціни на компоненти Nomi Smart Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#огляд-товару&quot; id=&quot;markdown-toc-огляд-товару&quot;&gt;Огляд товару&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;необіхідність-розумного-будинку&quot;&gt;Необіхідність розумного будинку&lt;/h2&gt;
+
+З опусканням температури нижче 0 С явною стала проблема утворення конденсату на підвіконнях вікон. Додатково у кутах віконних прорізів почали з’являтися призначки утворення плісняви. Одна з можливих причин цього є підвищенна вологість і так звана точка роси.
+
+Метеостанція на барній стійці у вітальні часто показувала значення вологості понад 70%.
+
+Для моніторингу мікроклімату у спальнях на другому поверсі потрібно було купувати метеостанції у кожну кімнату. Ціни на них починаються від 150 грн (при цьому точність і відгуки на такі пристрої здебільшого негативні). Як альтернатива була вибрана система розумного будинку Nomi Smart Home, т.я. датчик вологості і температури коштував 200 грн. Незважаючи на необхідність покупки базової станції для узгодження роботи датчиків, бажання спробувати технології SmartHome, зручність централізованного контролю стану мікроклімату в будинку і низька ціна у порівнянні з конкурентами переважили і було прийнято рішення купити набір &lt;a href=&quot;http://nomi-electronics.com/catalog/gadzhety-2/nomi-smart-home/&quot;&gt;Nomi Smart Home&lt;/a&gt; і 5 &lt;a href=&quot;http://nomi-electronics.com/catalog/gadzhety-2/datchik-vlazhnosti-i-temperatury-nomi-ssw006/&quot;&gt;датчиків температури і вологості NOMI SSW006&lt;/a&gt;.
+
+&lt;h2 id=&quot;про-продукцію-nomi&quot;&gt;Про продукцію Nomi&lt;/h2&gt;
+В інтернеті майже повність відсутня інформацію про продукцію Nomi Smart Home. Окрім пари відео на youtube від АЛЛО і розпаковки від покупців, зовсім не має обговорень на форумах, у twitter і т.і.
+
+Натрапивши на відгуки на &lt;a href=&quot;https://www.revogi.com/&quot;&gt;Revogi&lt;/a&gt; і порівнявши вигляд основних компонентів і мобільного додатку виникає відчуття, що це та сам продукція, тільки під різними брендами. Інформації про revogi smart home набагато більше.
+
+Екосистема Nomi Розумний дім включає такі компоненти
+&lt;ul&gt;
+  &lt;li&gt;Nomi Smart Home. Включає в себе Nomi Gateway Sensor, датчик відкривання дверей/вікна NOMI SSW002, датчик руху SSW003, розумна кнопка SSW004&lt;/li&gt;
+  &lt;li&gt;Розумна кнопка NOMI SSW004&lt;/li&gt;
+  &lt;li&gt;Пульт дистанційного керування NOMI SSW009&lt;/li&gt;
+  &lt;li&gt;Розумна сирена NOMI SSW008&lt;/li&gt;
+  &lt;li&gt;Датчик відкривання дверей/вікна NOMI SSW002&lt;/li&gt;
+  &lt;li&gt;Датчик затоплення NOMI SSW007&lt;/li&gt;
+  &lt;li&gt;Датчик диму NOMI SSW005&lt;/li&gt;
+  &lt;li&gt;Датчик вологості і температури NOMI SSW006&lt;/li&gt;
+  &lt;li&gt;Розумний мережевий фільтр NOMI SOW019&lt;/li&gt;
+  &lt;li&gt;Розумний світильник NOMI LTB006&lt;/li&gt;
+  &lt;li&gt;Розумна розетка NOMI SPB012&lt;/li&gt;
+  &lt;li&gt;Розумна розетка NOMI SOW018&lt;/li&gt;
+  &lt;li&gt;Розумна лампа з динаміком NOMI LTW311&lt;/li&gt;
+  &lt;li&gt;Розумна лампа NOMI LTW004&lt;/li&gt;
+  &lt;li&gt;Розумна LED-стрічка NOMI LTB210&lt;/li&gt;
+  &lt;li&gt;Розумна LED-лампа NOMI LYD003&lt;/li&gt;
+  &lt;li&gt;Розумна IP-камера NOMI IPC003&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;img src=&quot;http://localhost:4000/assets/2019-01-20-nomi-smart-home/NOMI-smart-home-ecosystem.jpg&quot; alt=&quot;Nomi smart home ecosystem&quot; /&gt;
+
+&lt;h2 id=&quot;ціни-на-компоненти-nomi-smart-home&quot;&gt;Ціни на компоненти Nomi Smart Home&lt;/h2&gt;
+
+На момент покупки 07.01.2020 на компоненти Nomi Smart Home в Епіцентрі були такі ціни
+&lt;ul&gt;
+  &lt;li&gt;Набір датчиків Nomi Smart Home 999 грн ($41.7)&lt;/li&gt;
+  &lt;li&gt;Розумний датчик вологості та температури Nomi SSW006 білий 199 грн ($8.3)&lt;/li&gt;
+&lt;/ul&gt;
+
+Загальна вартість комлекту з базового набору і 5 датчиків склала 1994 грн ($83)
+
+&lt;h2 id=&quot;огляд-товару&quot;&gt;Огляд товару&lt;/h2&gt;
+</description>
+        <pubDate>Mon, 20 Jan 2020 17:25:20 +0200</pubDate>
+        <link>http://localhost:4000/2020/01/20/nomi-smart-home/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/01/20/nomi-smart-home/</guid>
+        
+        <category>Розумний дім</category>
+        
+        <category>Будівництво і ремонт</category>
+        
+        <category>Опалення</category>
+        
+        
+        <category>Personal Life</category>
+        
+      </item>
     
       <item>
         <title>Coding Standards</title>
-        <description>Coding standard is important part of code quality. It’s important as improves code readability, decrease code review time and helps found errors in code.
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#tools&quot; id=&quot;markdown-toc-tools&quot;&gt;Tools&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#php-codesniffer&quot; id=&quot;markdown-toc-php-codesniffer&quot;&gt;PHP CodeSniffer&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#installation&quot; id=&quot;markdown-toc-installation&quot;&gt;Installation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#configuration&quot; id=&quot;markdown-toc-configuration&quot;&gt;Configuration&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#php-cs-fixer&quot; id=&quot;markdown-toc-php-cs-fixer&quot;&gt;PHP CS Fixer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#coding-standards-customization&quot; id=&quot;markdown-toc-coding-standards-customization&quot;&gt;Coding Standards customization&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+Coding standard is important part of code quality. It’s important as improves code readability, decrease code review time and helps found errors in code.
 
 That’s why such group as &lt;a href=&quot;http://www.php-fig.org/&quot;&gt;FIG&lt;/a&gt; exists. The idea behind the group is for project representatives to talk about the commonalities between our projects and find ways we can work together.
 
@@ -85,16 +168,23 @@ As there are a lot of legasy code and it’s hard change all codebase in one mom
         <link>http://localhost:4000/2014/11/04/coding-standards/</link>
         <guid isPermaLink="true">http://localhost:4000/2014/11/04/coding-standards/</guid>
         
-        
         <category>Development Conventions</category>
         
         <category>Code Quality</category>
+        
+        
+        <category>Development</category>
         
       </item>
     
       <item>
         <title>Version naming convention (version numbering)</title>
-        <description>According to development methodology you use periodicaly code changes are delivered to production and you make release.
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#version-naming-convention&quot; id=&quot;markdown-toc-version-naming-convention&quot;&gt;Version naming convention&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#upgrading-the-software-version-on-applying-a-hotfix&quot; id=&quot;markdown-toc-upgrading-the-software-version-on-applying-a-hotfix&quot;&gt;Upgrading the software version on applying a hotfix&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+According to development methodology you use periodicaly code changes are delivered to production and you make release.
 Release is point in time which you have to freeze for history. With git you can add tag for this, e.g.
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git tag -a v0.0.1 -m &quot;Release v0.0.1&quot;
@@ -142,14 +232,23 @@ To indicate hotfixes in version name I use patch segment alphabetic suffix
         <link>http://localhost:4000/2014/11/02/version-naming-convention-version-numbering/</link>
         <guid isPermaLink="true">http://localhost:4000/2014/11/02/version-naming-convention-version-numbering/</guid>
         
-        
         <category>Development Conventions</category>
+        
+        
+        <category>Development</category>
         
       </item>
     
       <item>
         <title>Continuous Deployment and Feature Toggles</title>
-        <description>&lt;h2 id=&quot;continuous-delivery-vs-continuous-deployment&quot;&gt;Continuous Delivery vs Continuous Deployment&lt;/h2&gt;
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#continuous-delivery-vs-continuous-deployment&quot; id=&quot;markdown-toc-continuous-delivery-vs-continuous-deployment&quot;&gt;Continuous Delivery vs Continuous Deployment&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#levels-of-code-delivery-and-releases&quot; id=&quot;markdown-toc-levels-of-code-delivery-and-releases&quot;&gt;Levels of code delivery and releases&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#dark-launching&quot; id=&quot;markdown-toc-dark-launching&quot;&gt;Dark Launching&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#feature-toggles&quot; id=&quot;markdown-toc-feature-toggles&quot;&gt;Feature Toggles&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;continuous-delivery-vs-continuous-deployment&quot;&gt;Continuous Delivery vs Continuous Deployment&lt;/h2&gt;
 
 Continuous Delivery includes automatic tests, code quality and errors checks. When all stages are passed code is released to production accorgin to business requirements. So business dictates when a build is deployed.
 
@@ -273,8 +372,10 @@ Martin Fowler’s explanation of feature toggle,
         <link>http://localhost:4000/2014/10/30/continuous-deployment-and-feature-toggles/</link>
         <guid isPermaLink="true">http://localhost:4000/2014/10/30/continuous-deployment-and-feature-toggles/</guid>
         
-        
         <category>Continuous Delivery</category>
+        
+        
+        <category>Development</category>
         
       </item>
     

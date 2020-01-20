@@ -4,9 +4,14 @@ title: "Coding Standards"
 date: 2014-11-04 22:59:51 +0200
 comments: true
 categories: 
+- Development
+tags:
 - Development Conventions
 - Code Quality
 ---
+
+* content
+{:toc}
 
 Coding standard is important part of code quality. It's important as improves code readability, decrease code review time and helps found errors in code.
 

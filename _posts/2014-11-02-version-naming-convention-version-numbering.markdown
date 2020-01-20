@@ -4,8 +4,14 @@ title: "Version naming convention (version numbering)"
 date: 2014-11-02 22:01:11 +0200
 comments: true
 categories:
+- Development
+tags:
 - Development Conventions
 ---
+
+* content
+{:toc}
+
 
 According to development methodology you use periodicaly code changes are delivered to production and you make release.
 Release is point in time which you have to freeze for history. With git you can add tag for this, e.g.

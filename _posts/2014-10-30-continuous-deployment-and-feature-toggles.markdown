@@ -4,9 +4,14 @@ title: "Continuous Deployment and Feature Toggles"
 date: 2014-10-30 21:23:26 +0200
 comments: true
 categories:
+- Development
+tags:
 - Continuous Delivery
 mathjax: true
 ---
+
+* content
+{:toc}
 
 ## Continuous Delivery vs Continuous Deployment
 

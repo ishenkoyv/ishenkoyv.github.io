@@ -7,7 +7,7 @@
 
 # Site settings
 title: Yurii Ishchenko 
-brief-intro: Personal Blog
+brief-intro: #Personal Blog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://ishenkoyv.github.io" # the base hostname & protocol for your site
 

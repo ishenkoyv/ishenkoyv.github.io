@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Continuous Deployment and Feature Toggles</title>
-    <meta name="description" content="  Continuous Delivery vs Continuous Deployment  Levels of code delivery and releases  Dark Launching  Feature TogglesContinuous Delivery vs Continuous Deploy...">
+    <title>Nomi Smart Home</title>
+    <meta name="description" content="  Необіхідність розумного будинку  Про продукцію Nomi  Ціни на компоненти Nomi Smart Home  Огляд товаруНеобіхідність розумного будинкуЗ опусканням температур...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="http://localhost:4000/2014/10/30/continuous-deployment-and-feature-toggles/">
+    <link rel="canonical" href="http://localhost:4000/2020/01/20/nomi-smart-home/">
     <link rel="alternate" type="application/rss+xml" title="Yurii Ishchenko" href="http://localhost:4000/feed.xml ">
 
 
@@ -122,11 +122,11 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>Continuous Deployment and Feature Toggles</h1>
+        <h1>Nomi Smart Home</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2014-10-30
+                <i class="fa fa-calendar"></i>2020-01-20
             </div>
 
             <div class="label-card">
@@ -146,7 +146,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#Development" title="Category: Development" rel="category">Development</a>
+        <a href="/category/#Personal Life" title="Category: Personal Life" rel="category">Personal Life</a>
     
   
 
@@ -163,8 +163,14 @@
   <i class="fa fa-tags"></i>
   
     
-        <!--a href="/tag/#Continuous+Delivery" title="Tag: Continuous Delivery" rel="tag">Continuous Delivery</a-->
-        <a href="/tag/#Continuous Delivery" title="Tag: Continuous Delivery" rel="tag">Continuous Delivery</a>
+        <!--a href="/tag/#%D0%A0%D0%BE%D0%B7%D1%83%D0%BC%D0%BD%D0%B8%D0%B9+%D0%B4%D1%96%D0%BC" title="Tag: Розумний дім" rel="tag">Розумний дім</a-->
+        <a href="/tag/#Розумний дім" title="Tag: Розумний дім" rel="tag">Розумний дім</a>&nbsp;
+    
+        <!--a href="/tag/#%D0%91%D1%83%D0%B4%D1%96%D0%B2%D0%BD%D0%B8%D1%86%D1%82%D0%B2%D0%BE+%D1%96+%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82" title="Tag: Будівництво і ремонт" rel="tag">Будівництво і ремонт</a-->
+        <a href="/tag/#Будівництво і ремонт" title="Tag: Будівництво і ремонт" rel="tag">Будівництво і ремонт</a>&nbsp;
+    
+        <!--a href="/tag/#%D0%9E%D0%BF%D0%B0%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F" title="Tag: Опалення" rel="tag">Опалення</a-->
+        <a href="/tag/#Опалення" title="Tag: Опалення" rel="tag">Опалення</a>
     
   
 
@@ -176,131 +182,59 @@
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
         <ul id="markdown-toc">
-  <li><a href="#continuous-delivery-vs-continuous-deployment" id="markdown-toc-continuous-delivery-vs-continuous-deployment">Continuous Delivery vs Continuous Deployment</a></li>
-  <li><a href="#levels-of-code-delivery-and-releases" id="markdown-toc-levels-of-code-delivery-and-releases">Levels of code delivery and releases</a></li>
-  <li><a href="#dark-launching" id="markdown-toc-dark-launching">Dark Launching</a></li>
-  <li><a href="#feature-toggles" id="markdown-toc-feature-toggles">Feature Toggles</a></li>
+  <li><a href="#необіхідність-розумного-будинку" id="markdown-toc-необіхідність-розумного-будинку">Необіхідність розумного будинку</a></li>
+  <li><a href="#про-продукцію-nomi" id="markdown-toc-про-продукцію-nomi">Про продукцію Nomi</a></li>
+  <li><a href="#ціни-на-компоненти-nomi-smart-home" id="markdown-toc-ціни-на-компоненти-nomi-smart-home">Ціни на компоненти Nomi Smart Home</a></li>
+  <li><a href="#огляд-товару" id="markdown-toc-огляд-товару">Огляд товару</a></li>
 </ul>
 
-<h2 id="continuous-delivery-vs-continuous-deployment">Continuous Delivery vs Continuous Deployment</h2>
+<h2 id="необіхідність-розумного-будинку">Необіхідність розумного будинку</h2>
 
-<p>Continuous Delivery includes automatic tests, code quality and errors checks. When all stages are passed code is released to production accorgin to business requirements. So business dictates when a build is deployed.</p>
+<p>З опусканням температури нижче 0 С явною стала проблема утворення конденсату на підвіконнях вікон. Додатково у кутах віконних прорізів почали з’являтися призначки утворення плісняви. Одна з можливих причин цього є підвищенна вологість і так звана точка роси.</p>
 
-<p><strong>Drawbacks of continuous delivery approach</strong>:</p>
+<p>Метеостанція на барній стійці у вітальні часто показувала значення вологості понад 70%.</p>
 
+<p>Для моніторингу мікроклімату у спальнях на другому поверсі потрібно було купувати метеостанції у кожну кімнату. Ціни на них починаються від 150 грн (при цьому точність і відгуки на такі пристрої здебільшого негативні). Як альтернатива була вибрана система розумного будинку Nomi Smart Home, т.я. датчик вологості і температури коштував 200 грн. Незважаючи на необхідність покупки базової станції для узгодження роботи датчиків, бажання спробувати технології SmartHome, зручність централізованного контролю стану мікроклімату в будинку і низька ціна у порівнянні з конкурентами переважили і було прийнято рішення купити набір <a href="http://nomi-electronics.com/catalog/gadzhety-2/nomi-smart-home/">Nomi Smart Home</a> і 5 <a href="http://nomi-electronics.com/catalog/gadzhety-2/datchik-vlazhnosti-i-temperatury-nomi-ssw006/">датчиків температури і вологості NOMI SSW006</a>.</p>
+
+<h2 id="про-продукцію-nomi">Про продукцію Nomi</h2>
+<p>В інтернеті майже повність відсутня інформацію про продукцію Nomi Smart Home. Окрім пари відео на youtube від АЛЛО і розпаковки від покупців, зовсім не має обговорень на форумах, у twitter і т.і.</p>
+
+<p>Натрапивши на відгуки на <a href="https://www.revogi.com/">Revogi</a> і порівнявши вигляд основних компонентів і мобільного додатку виникає відчуття, що це та сам продукція, тільки під різними брендами. Інформації про revogi smart home набагато більше.</p>
+
+<p>Екосистема Nomi Розумний дім включає такі компоненти</p>
 <ul>
-  <li>scheduled downtimes</li>
-  <li>during “silence period” of no release we can cumulate a lot of changes which will be hard to release. This increase release time and possibility of random bugs on production</li>
-  <li>all changes appear to all customers immidiately and if some bug exists we will get storm of calls and emails and a very little time to rollback changes/make hotfix</li>
+  <li>Nomi Smart Home. Включає в себе Nomi Gateway Sensor, датчик відкривання дверей/вікна NOMI SSW002, датчик руху SSW003, розумна кнопка SSW004</li>
+  <li>Розумна кнопка NOMI SSW004</li>
+  <li>Пульт дистанційного керування NOMI SSW009</li>
+  <li>Розумна сирена NOMI SSW008</li>
+  <li>Датчик відкривання дверей/вікна NOMI SSW002</li>
+  <li>Датчик затоплення NOMI SSW007</li>
+  <li>Датчик диму NOMI SSW005</li>
+  <li>Датчик вологості і температури NOMI SSW006</li>
+  <li>Розумний мережевий фільтр NOMI SOW019</li>
+  <li>Розумний світильник NOMI LTB006</li>
+  <li>Розумна розетка NOMI SPB012</li>
+  <li>Розумна розетка NOMI SOW018</li>
+  <li>Розумна лампа з динаміком NOMI LTW311</li>
+  <li>Розумна лампа NOMI LTW004</li>
+  <li>Розумна LED-стрічка NOMI LTB210</li>
+  <li>Розумна LED-лампа NOMI LYD003</li>
+  <li>Розумна IP-камера NOMI IPC003</li>
 </ul>
 
-<p>During release process you have to configure all new futures correctly and sometimes configuration error is catched too late.</p>
+<p><img src="http://localhost:4000/assets/2019-01-20-nomi-smart-home/NOMI-smart-home-ecosystem.jpg" alt="Nomi smart home ecosystem" /></p>
 
-<p>Imagegine we found some problem with released code. So what can cause it as all changes were tested and pass all delivery stages including automatical and manual testing?</p>
+<h2 id="ціни-на-компоненти-nomi-smart-home">Ціни на компоненти Nomi Smart Home</h2>
 
-<p>Here some <strong>examples of questions that can arise</strong>:</p>
-
+<p>На момент покупки 07.01.2020 на компоненти Nomi Smart Home в Епіцентрі були такі ціни</p>
 <ul>
-  <li>Is bug in one of numerous check-ins?</li>
-  <li>Missing unit tests?</li>
-  <li>Missing automated UA tests?</li>
-  <li>Missing manual UA tests?</li>
-  <li>Data out of sync?</li>
-  <li>Server configuration out of sync?</li>
-  <li>Capacity vs current load?</li>
-  <li>Deployment script?</li>
+  <li>Набір датчиків Nomi Smart Home 999 грн ($41.7)</li>
+  <li>Розумний датчик вологості та температури Nomi SSW006 білий 199 грн ($8.3)</li>
 </ul>
 
-<p><!--more--></p>
+<p>Загальна вартість комлекту з базового набору і 5 датчиків склала 1994 грн ($83)</p>
 
-<p><strong>Continuous Deployment difference to Continuous delivery</strong></p>
-
-<ul>
-  <li>every passing build is deployd to production (e.g. +30 deploys per day)</li>
-  <li>constantly integrating into production</li>
-  <li>all enhancements are gated by Config Flags (“dark” releases). Turning flags on, off, user list, 0-100%</li>
-  <li>validate in production, hidden from public</li>
-</ul>
-
-<p>Software Deploy ≠ Product Launch</p>
-
-<h2 id="levels-of-code-delivery-and-releases">Levels of code delivery and releases</h2>
-
-<p><strong>CD 100-200 LEVELS</strong></p>
-
-<ul>
-  <li>CI environment for automated tests</li>
-  <li>Commiting to trunk</li>
-  <li>Branching in code</li>
-  <li>Config flags (a.k.a feature flags)</li>
-  <li>Metrics and alerting</li>
-  <li>Automatic deploy script</li>
-</ul>
-
-<p><strong>CD 300 LEVEL</strong></p>
-
-<ul>
-  <li>Deploys vs releases</li>
-  <li>Decoupled systems, schema changes</li>
-  <li>Integration and Operations</li>
-</ul>
-
-<h2 id="dark-launching">Dark Launching</h2>
-
-<p>Term dark launching was coined by Facebook engineering team to simulate the new features in production environment well before release.</p>
-
-<blockquote>
-  <p>The secret for going from zero to seventy million users overnight is to avoid doing it all in one fell swoop. We chose to simulate the impact of many real users hitting many machines by means of a “dark launch” period in which Facebook pages would make connections to the chat servers, query for presence information and simulate message sends without a single UI element drawn on the page. With the “dark launch” bugs fixed, we hope that you enjoy Facebook Chat now that the UI lights have been turned on.</p>
-</blockquote>
-
-<h2 id="feature-toggles">Feature Toggles</h2>
-
-<p><strong>Feature toggles are used for dark Launching or phased rollout</strong>. Once latest version of application deployed we can toggle and expose a set of features to selected or all end-users.</p>
-
-<p><strong>Feature toggles can be also used for</strong>,</p>
-
-<ul>
-  <li>for avoiding branching and merging</li>
-  <li>experimenting such as A/B tests</li>
-  <li>putting unfinished code in production</li>
-  <li>reducing risk associated with large change</li>
-  <li>turning a resources heavy feature OFF in high load conditions</li>
-</ul>
-
-<p>According to Ross Harmes @ Flickr</p>
-
-<blockquote>
-  <p>Feature flags and flippers mean we don’t have to do merges, and that all code (no matter how far it is from being released) is integrated as soon as it is committed. Deploys become smaller and more frequent; this leads to bugs that are easier to fix, since we can catch them earlier and the amount of changed code is minimized.</p>
-</blockquote>
-
-<p>Martin Fowler’s explanation of feature toggle,</p>
-
-<blockquote>
-  <p>The basic idea is to have a configuration file that defines a bunch of toggles for various features you have pending. The running application then uses these toggles in order to decide whether or not to show the new feature.</p>
-</blockquote>
-
-<p><strong>Feature toggles in PHP</strong></p>
-
-<ul>
-  <li><a href="https://github.com/qandidate-labs/qandidate-toggle">Qandidate toggle</a></li>
-  <li><a href="http://github.com/marekkalnik/FeatureToggleBundle">FeatureToggle (Symfony)</a></li>
-</ul>
-
-<p><strong>Feature toggles in Ruby</strong></p>
-
-<ul>
-  <li><a href="http://github.com/pda/flip">Flip</a></li>
-  <li><a href="http://github.com/jamesgolick/rollout">Rollout</a></li>
-  <li><a href="http://github.com/jamesgolick/degrade">Degrade</a></li>
-</ul>
-
-<p><strong>Feature toggles in Python</strong></p>
-
-<ul>
-  <li><a href="http://github.com/disqus/gargoyle">Gargoyle (Django)</a></li>
-  <li><a href="http://github.com/jsocol/django-waffle">Django Waffle (Django)</a></li>
-  <li><a href="https://github.com/disqus/nexus">Nexus admin</a></li>
-</ul>
+<h2 id="огляд-товару">Огляд товару</h2>
 
         </article>
         <hr>
@@ -312,11 +246,26 @@
                 
                     
                 
-            
+                    
                 
                     
                 
             
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
                 
                     
                 
@@ -327,14 +276,7 @@
                 
                     
                 
-            
-                
                     
-                
-            
-        
-            
-            
                 
                     
                 
@@ -345,11 +287,11 @@
         <div class="post-recent">
     <div class="pre">
         
+        <p><strong><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous | </strong> <a href="/2014/11/04/coding-standards/">Coding Standards</a></p>
+        
     </div>
     <div class="nex">
 
-        
-        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; Next <i class="fa fa-chevron-right" aria-hidden="true"></i> | </strong> <a href="/2014/11/02/version-naming-convention-version-numbering/">Version naming convention (version numbering)</a></p>
         
     </div>
 </div>
@@ -367,8 +309,8 @@
      */
 
     var disqus_config = function() {
-        this.page.url = 'http://localhost:4000/2014/10/30/continuous-deployment-and-feature-toggles/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://localhost:4000/2014/10/30/continuous-deployment-and-feature-toggles/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://localhost:4000/2020/01/20/nomi-smart-home/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2020/01/20/nomi-smart-home/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 
     (function() { // DON'T EDIT BELOW THIS LINE
