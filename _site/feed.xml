@@ -5,9 +5,37 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jan 2020 22:06:31 +0200</pubDate>
-    <lastBuildDate>Mon, 20 Jan 2020 22:06:31 +0200</lastBuildDate>
+    <pubDate>Thu, 23 Jan 2020 00:18:18 +0200</pubDate>
+    <lastBuildDate>Thu, 23 Jan 2020 00:18:18 +0200</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Під'єднання програматора Salus до електрокотла Protherm Ray (Скат)</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#необіхідність-розумного-будинку&quot; id=&quot;markdown-toc-необіхідність-розумного-будинку&quot;&gt;Необіхідність розумного будинку&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;необіхідність-розумного-будинку&quot;&gt;Необіхідність розумного будинку&lt;/h2&gt;
+
+З опусканням температури нижче 0 С явною стала проблема утворення конденсату на підвіконнях вікон. Додатково у кутах віконних прорізів почали з’являтися призначки утворення плісняви. Одна з можливих причин цього є підвищенна вологість і так звана точка роси.
+
+Метеостанція на барній стійці у вітальні часто показувала значення вологості понад 70%.
+
+Для моніторингу мікроклімату у спальнях на другому поверсі потрібно було купувати метеостанції у кожну кімнату. Ціни на них починаються від 150 грн (при цьому точність і відгуки на такі пристрої здебільшого негативні). Як альтернатива була вибрана система розумного будинку Nomi Smart Home, т.я. датчик вологості і температури коштував 200 грн. Незважаючи на необхідність покупки базової станції для узгодження роботи датчиків, бажання спробувати технології SmartHome, зручність централізованного контролю стану мікроклімату в будинку і низька ціна у порівнянні з конкурентами переважили і було прийнято рішення купити набір &lt;a href=&quot;http://nomi-electronics.com/catalog/gadzhety-2/nomi-smart-home/&quot;&gt;Nomi Smart Home&lt;/a&gt; і 5 &lt;a href=&quot;http://nomi-electronics.com/catalog/gadzhety-2/datchik-vlazhnosti-i-temperatury-nomi-ssw006/&quot;&gt;датчиків температури і вологості NOMI SSW006&lt;/a&gt;.
+
+</description>
+        <pubDate>Wed, 22 Jan 2020 23:10:40 +0200</pubDate>
+        <link>http://localhost:4000/2020/01/22/programator-salus-protherm-ray-skat/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/01/22/programator-salus-protherm-ray-skat/</guid>
+        
+        <category>Будівництво і ремонт</category>
+        
+        <category>Опалення</category>
+        
+        
+        <category>Personal Life</category>
+        
+      </item>
     
       <item>
         <title>Nomi Smart Home</title>

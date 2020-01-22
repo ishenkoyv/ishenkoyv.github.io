@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Version naming convention (version numbering)</title>
-    <meta name="description" content="  Version naming convention  Upgrading the software version on applying a hotfixAccording to development methodology you use periodicaly code changes are del...">
+    <title>Під&#39;єднання програматора Salus до електрокотла Protherm Ray (Скат)</title>
+    <meta name="description" content="  Необіхідність розумного будинкуНеобіхідність розумного будинкуЗ опусканням температури нижче 0 С явною стала проблема утворення конденсату на підвіконнях в...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="http://localhost:4000/2014/11/02/version-naming-convention-version-numbering/">
+    <link rel="canonical" href="http://localhost:4000/2020/01/22/programator-salus-protherm-ray-skat/">
     <link rel="alternate" type="application/rss+xml" title="Yurii Ishchenko" href="http://localhost:4000/feed.xml ">
 
 
@@ -32,6 +32,18 @@
     </script>
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+    "HTML-CSS": {
+      linebreaks: { automatic: true, width: "container" }
+    }
+});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 </head>
 
@@ -110,11 +122,11 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>Version naming convention (version numbering)</h1>
+        <h1>Під'єднання програматора Salus до електрокотла Protherm Ray (Скат)</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2014-11-02
+                <i class="fa fa-calendar"></i>2020-01-22
             </div>
 
             <div class="label-card">
@@ -134,7 +146,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#Development" title="Category: Development" rel="category">Development</a>
+        <a href="/category/#Personal Life" title="Category: Personal Life" rel="category">Personal Life</a>
     
   
 
@@ -151,8 +163,11 @@
   <i class="fa fa-tags"></i>
   
     
-        <!--a href="/tag/#Development+Conventions" title="Tag: Development Conventions" rel="tag">Development Conventions</a-->
-        <a href="/tag/#Development Conventions" title="Tag: Development Conventions" rel="tag">Development Conventions</a>
+        <!--a href="/tag/#%D0%91%D1%83%D0%B4%D1%96%D0%B2%D0%BD%D0%B8%D1%86%D1%82%D0%B2%D0%BE+%D1%96+%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82" title="Tag: Будівництво і ремонт" rel="tag">Будівництво і ремонт</a-->
+        <a href="/tag/#Будівництво і ремонт" title="Tag: Будівництво і ремонт" rel="tag">Будівництво і ремонт</a>&nbsp;
+    
+        <!--a href="/tag/#%D0%9E%D0%BF%D0%B0%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F" title="Tag: Опалення" rel="tag">Опалення</a-->
+        <a href="/tag/#Опалення" title="Tag: Опалення" rel="tag">Опалення</a>
     
   
 
@@ -164,53 +179,53 @@
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
         <ul id="markdown-toc">
-  <li><a href="#version-naming-convention" id="markdown-toc-version-naming-convention">Version naming convention</a></li>
-  <li><a href="#upgrading-the-software-version-on-applying-a-hotfix" id="markdown-toc-upgrading-the-software-version-on-applying-a-hotfix">Upgrading the software version on applying a hotfix</a></li>
+  <li><a href="#необіхідність-розумного-будинку" id="markdown-toc-необіхідність-розумного-будинку">Необіхідність розумного будинку</a></li>
+  <li><a href="#тижневий-програматор-salus" id="markdown-toc-тижневий-програматор-salus">Тижневий програматор Salus</a></li>
 </ul>
 
-<p>According to development methodology you use periodicaly code changes are delivered to production and you make release.
-Release is point in time which you have to freeze for history. With git you can add tag for this, e.g.</p>
+<h2 id="необіхідність-розумного-будинку">Необіхідність розумного будинку</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git tag -a v0.0.1 -m "Release v0.0.1"
-git push origin v0.0.1
-</code></pre></div></div>
+<p>З опусканням температури нижче 0 С явною стала проблема утворення конденсату на підвіконнях вікон. Додатково у кутах віконних прорізів почали з’являтися призначки утворення плісняви. Одна з можливих причин цього є підвищенна вологість і так звана точка роси.</p>
 
-<p>What do all this digits mean?</p>
+<p>Метеостанція на барній стійці у вітальні часто показувала значення вологості понад 70%.</p>
 
-<h2 id="version-naming-convention">Version naming convention</h2>
-<p>I use <a href="http://semver.org/">semantic versioning</a>. This approach is popular (<a href="https://developers.google.com/java-dev-tools/wintester/html/installation/version_naming_convention">google</a>, <a href="https://wiki.eclipse.org/Version_Numbering">eclipse</a> etc.) and http://semver.org/.
-So version number contains 3 segments (versions): major, minor, patch:</p>
+<p>Для моніторингу мікроклімату у спальнях на другому поверсі потрібно було купувати метеостанції у кожну кімнату. Ціни на них починаються від 150 грн (при цьому точність і відгуки на такі пристрої здебільшого негативні). Як альтернатива була вибрана система розумного будинку Nomi Smart Home, т.я. датчик вологості і температури коштував 200 грн. Незважаючи на необхідність покупки базової станції для узгодження роботи датчиків, бажання спробувати технології SmartHome, зручність централізованного контролю стану мікроклімату в будинку і низька ціна у порівнянні з конкурентами переважили і було прийнято рішення купити набір <a href="http://nomi-electronics.com/catalog/gadzhety-2/nomi-smart-home/">Nomi Smart Home</a> і 5 <a href="http://nomi-electronics.com/catalog/gadzhety-2/datchik-vlazhnosti-i-temperatury-nomi-ssw006/">датчиків температури і вологості NOMI SSW006</a>.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>v0.0.1
-^ ^ ^
-| | |
-| | +--- Patch verion (Minor changes, bugfixes etc)
-| +----- Minor version (Added new huge functionality)
-+------- Major version (Incompatible API changes)
-</code></pre></div></div>
+<h2 id="тижневий-програматор-salus">Тижневий програматор Salus</h2>
 
-<p>When the major segment is changed the minor and patch segments are reset to 0.
-When the minor segment is changed the patch segment is reset to 0.</p>
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>A</th>
+      <th>W</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>I</td>
+      <td>0.26</td>
+      <td>58</td>
+    </tr>
+    <tr>
+      <td>II</td>
+      <td>0.37</td>
+      <td>83</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>So your releases list will look something like that</p>
+<p><img src="http://localhost:4000/assets/2019-01-22-programator-salus-protherm-ray-skat/programator_salus_instrukciya.jpg" alt="Salus" />
+<img src="http://localhost:4000/assets/2019-01-22-programator-salus-protherm-ray-skat/programator_salus_yaziki.jpg" alt="Salus" />
+<img src="http://localhost:4000/assets/2019-01-22-programator-salus-protherm-ray-skat/nasos_teploi_pidlogy.jpg" alt="Salus" />
+<img src="http://localhost:4000/assets/2019-01-22-programator-salus-protherm-ray-skat/programator_salus_garantiya.jpg" alt="Salus" /></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git tag -l
-v0.0.1
-v0.0.2
-v0.0.3
-v0.1.0
-v0.1.1
-v1.0.0
-</code></pre></div></div>
+<p><img src="http://localhost:4000/assets/2019-01-22-programator-salus-protherm-ray-skat/programator_salus_epicentr_cena.jpg" alt="Salus" />
+<img src="http://localhost:4000/assets/2019-01-22-programator-salus-protherm-ray-skat/pidednanya_salys_protherm.jpg" alt="Salus" />
+<img src="http://localhost:4000/assets/2019-01-22-programator-salus-protherm-ray-skat/protherm_ray_skat_nasos.jpg" alt="Salus" />
+<img src="http://localhost:4000/assets/2019-01-22-programator-salus-protherm-ray-skat/pidednanya_salys_protherm_kontakti.jpg" alt="Salus" />
+<img src="http://localhost:4000/assets/2019-01-22-programator-salus-protherm-ray-skat/protherm_ray_skat_parametri.jpg" alt="Salus" /></p>
 
-<h2 id="upgrading-the-software-version-on-applying-a-hotfix">Upgrading the software version on applying a hotfix</h2>
-<p>We leave in not an ideal world and sometimes event if your changes are good tested critical bugs appear on production. Such sort of critical bugs should be fixed as fast as possible, so you don’t have time to go through all development cycle stages. But this is not a reason to make manual changes on production.</p>
-
-<p>If you made appropriate changes to fix bug and commited changes to git (and to production) you should reflect this moment in versions history, i.e. add tag.
-To indicate hotfixes in version name I use patch segment alphabetic suffix</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>v0.0.1a
-</code></pre></div></div>
 
         </article>
         <hr>
@@ -222,28 +237,8 @@ To indicate hotfixes in version name I use patch segment alphabetic suffix</p>
                 
                     
                 
-            
-                
                     
                 
-            
-        
-            
-            
-                
-                    
-                
-            
-                
-                    
-                
-            
-                
-                    
-                
-            
-        
-            
             
                 
                     
@@ -252,7 +247,7 @@ To indicate hotfixes in version name I use patch segment alphabetic suffix</p>
                         <ul>
                         
                         <li class="relatedPost">
-                            <a href="/2014/11/04/coding-standards/">Coding Standards
+                            <a href="/2020/01/20/nomi-smart-home/">Nomi Smart Home
                             
                             </a>
                         </li>
@@ -260,7 +255,11 @@ To indicate hotfixes in version name I use patch segment alphabetic suffix</p>
                         
                     
                 
+                    
+                
             
+                
+                    
                 
                     
                 
@@ -268,6 +267,32 @@ To indicate hotfixes in version name I use patch segment alphabetic suffix</p>
         
             
             
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
                 
                     
                 
@@ -280,13 +305,11 @@ To indicate hotfixes in version name I use patch segment alphabetic suffix</p>
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous | </strong> <a href="/2014/10/30/continuous-deployment-and-feature-toggles/">Continuous Deployment and Feature Toggles</a></p>
+        <p><strong><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous | </strong> <a href="/2020/01/20/nomi-smart-home/">Nomi Smart Home</a></p>
         
     </div>
     <div class="nex">
 
-        
-        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; Next <i class="fa fa-chevron-right" aria-hidden="true"></i> | </strong> <a href="/2014/11/04/coding-standards/">Coding Standards</a></p>
         
     </div>
 </div>
@@ -304,8 +327,8 @@ To indicate hotfixes in version name I use patch segment alphabetic suffix</p>
      */
 
     var disqus_config = function() {
-        this.page.url = 'http://localhost:4000/2014/11/02/version-naming-convention-version-numbering/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://localhost:4000/2014/11/02/version-naming-convention-version-numbering/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://localhost:4000/2020/01/22/programator-salus-protherm-ray-skat/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2020/01/22/programator-salus-protherm-ray-skat/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 
     (function() { // DON'T EDIT BELOW THIS LINE
