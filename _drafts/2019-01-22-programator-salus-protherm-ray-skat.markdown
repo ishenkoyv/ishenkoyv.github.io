@@ -14,21 +14,62 @@ mathjax: true
 * content
 {:toc}
 
-## Необіхідність розумного будинку
+
+  Програматор - це гарна альтернатива ручному регулюванню температурного режиму котла і для підтримки комфортної температури в будинку. Також при електроопаленні і двозонному тарифу, він дозволяє економити витрати на опалення за рахунок виставлення режиму работи.
+
+  У мене в будинку реалізована комбінована система опалення - на першому поверсі тепла підлога, на другому - радіатори. Тепла підлога має доволі велику інертність і може використовуватись, як теплоакумулятор.
+
+
+  Програматор Salus 091 FLRF був куплений спонтанно під впливом акційної ціни в Епіцентрі. Бездротовий датчик температури дозволяє розмістити його в зручному місці без прив'язки до технічного приміщення. Брендові програматори коштують значно дорожче.
+
   
-  З опусканням температури нижче 0 С явною стала проблема утворення конденсату на підвіконнях вікон. Додатково у кутах віконних прорізів почали з'являтися призначки утворення плісняви. Одна з можливих причин цього є підвищенна вологість і так звана точка роси. 
-
-
-  Метеостанція на барній стійці у вітальні часто показувала значення вологості понад 70%.
-
-
-  Для моніторингу мікроклімату у спальнях на другому поверсі потрібно було купувати метеостанції у кожну кімнату. Ціни на них починаються від 150 грн (при цьому точність і відгуки на такі пристрої здебільшого негативні). Як альтернатива була вибрана система розумного будинку Nomi Smart Home, т.я. датчик вологості і температури коштував 200 грн. Незважаючи на необхідність покупки базової станції для узгодження роботи датчиків, бажання спробувати технології SmartHome, зручність централізованного контролю стану мікроклімату в будинку і низька ціна у порівнянні з конкурентами переважили і було прийнято рішення купити набір [Nomi Smart Home](http://nomi-electronics.com/catalog/gadzhety-2/nomi-smart-home/) і 5 [датчиків температури і вологості NOMI SSW006](http://nomi-electronics.com/catalog/gadzhety-2/datchik-vlazhnosti-i-temperatury-nomi-ssw006/).
 
 
 
+## Тижневий програматор Salus 091 FLRF
+
+![Salus]({{ site.url }}/assets/2019-01-22-programator-salus-protherm-ray-skat/programator_salus_epicentr_cena.jpg)
+
+На момент покупки в жовтні 2019 року ціна в Епіцентрі зі знижкою на бездротовий програматор Salus 091 FLRF складала 1599 грн.
+
+__Переваги__:
+
+  * ціна
+  * бездротовий датчик температури
+  * 2 температурних режими - економний та комфортний
+  * погодинне програмування кожного дня тижня
+  * можливість створити 3 особисті програми
+
+__Недоліки__:
+
+  * виробник - Гонконг
+  * відсутність відгуків
+  * відсутність інформації про підлючення і використання
 
 
-## Тижневий програматор Salus
+На упаковці і в оригінльній інструкції користувача/сервісній книзі відсутня українська і англійські мови. Значаться тільки німецька, чеська, польська та руминські мови.
+
+
+![Salus]({{ site.url }}/assets/2019-01-22-programator-salus-protherm-ray-skat/programator_salus_yaziki.jpg)
+
+
+При цьому в комплекті є буклет з додатковими перекладами інструкції користувача, включно з українськомю мовою. На сайті salus.in.ua також доступний для завантаження [pdf-файл інструкції російською](https://www.salus.in.ua/FAILE/manual/091fl_rf_rus.pdf).
+
+
+![Salus]({{ site.url }}/assets/2019-01-22-programator-salus-protherm-ray-skat/programator_salus_instrukciya.jpg)
+
+
+Цікавим моментом було заповнення гарантійного талону в оригінальній інструкції коритсувача.
+
+
+![Salus]({{ site.url }}/assets/2019-01-22-programator-salus-protherm-ray-skat/programator_salus_garantiya.jpg)
+
+
+## Під'єднання Salus до Protherm Ray (Скат)
+
+![Salus]({{ site.url }}/assets/2019-01-22-programator-salus-protherm-ray-skat/protherm_ray_skat_parametri.jpg)
+![Salus]({{ site.url }}/assets/2019-01-22-programator-salus-protherm-ray-skat/pidednanya_salys_protherm_kontakti.jpg)
+
 
 |   | A  | W  |
 |---|---|---|
@@ -36,16 +77,10 @@ mathjax: true
 | II  | 0.37  | 83 |
 
 
-![Salus]({{ site.url }}/assets/2019-01-22-programator-salus-protherm-ray-skat/programator_salus_instrukciya.jpg)
-![Salus]({{ site.url }}/assets/2019-01-22-programator-salus-protherm-ray-skat/programator_salus_yaziki.jpg)
 ![Salus]({{ site.url }}/assets/2019-01-22-programator-salus-protherm-ray-skat/nasos_teploi_pidlogy.jpg)
-![Salus]({{ site.url }}/assets/2019-01-22-programator-salus-protherm-ray-skat/programator_salus_garantiya.jpg)
 
 
 
-![Salus]({{ site.url }}/assets/2019-01-22-programator-salus-protherm-ray-skat/programator_salus_epicentr_cena.jpg)
 ![Salus]({{ site.url }}/assets/2019-01-22-programator-salus-protherm-ray-skat/pidednanya_salys_protherm.jpg)
 ![Salus]({{ site.url }}/assets/2019-01-22-programator-salus-protherm-ray-skat/protherm_ray_skat_nasos.jpg)
-![Salus]({{ site.url }}/assets/2019-01-22-programator-salus-protherm-ray-skat/pidednanya_salys_protherm_kontakti.jpg)
-![Salus]({{ site.url }}/assets/2019-01-22-programator-salus-protherm-ray-skat/protherm_ray_skat_parametri.jpg)
 
