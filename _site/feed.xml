@@ -5,9 +5,28 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 01 Feb 2020 22:57:09 +0200</pubDate>
-    <lastBuildDate>Sat, 01 Feb 2020 22:57:09 +0200</lastBuildDate>
+    <pubDate>Sat, 15 Feb 2020 21:16:54 +0200</pubDate>
+    <lastBuildDate>Sat, 15 Feb 2020 21:16:54 +0200</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Налаштування витратомірів теплої підлоги</title>
+        <description>
+Перший поверх в моєму будинку повністю обігрівається теплою підлогою. Регулювання відбувається за рахунок виставлення температури подачі і витратомірами. З температурою подачі все більш-менш зрозуміло - температура теплої підлоги в межах 26-32С, обмеження температури теплоносія 45-50С для уникнення руйнування стяжки/плитки. А от з регулюванням витратомірів були питання. Нижче спробую організувати інформацію з цього питання.
+
+</description>
+        <pubDate>Sat, 15 Feb 2020 19:05:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/02/15/nalashtuvannya-vitratomiriv-teploi-pidlogi/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/02/15/nalashtuvannya-vitratomiriv-teploi-pidlogi/</guid>
+        
+        <category>Будівництво і ремонт</category>
+        
+        <category>Опалення</category>
+        
+        
+        <category>Personal Life</category>
+        
+      </item>
     
       <item>
         <title>Використання пірометру для теплоаудиту</title>

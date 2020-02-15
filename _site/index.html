@@ -102,6 +102,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -113,6 +115,69 @@
         <h1>The Blog!</h1>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2020/02/15/nalashtuvannya-vitratomiriv-teploi-pidlogi/">Налаштування витратомірів теплої підлоги</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2020-02-15
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Personal Life" title="Category: Personal Life" rel="category">Personal Life</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#%D0%91%D1%83%D0%B4%D1%96%D0%B2%D0%BD%D0%B8%D1%86%D1%82%D0%B2%D0%BE+%D1%96+%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82" title="Tag: Будівництво і ремонт" rel="tag">Будівництво і ремонт</a>&nbsp;
+    
+        <a href="/tag/#%D0%9E%D0%BF%D0%B0%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F" title="Tag: Опалення" rel="tag">Опалення</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    
+<p>Перший поверх в моєму будинку повністю обігрівається теплою підлогою. Регулювання відбувається за рахунок виставлення температури подачі і витратомірами. З температурою подачі все більш-менш зрозуміло - температура теплої підлоги в межах 26-32С, обмеження температури теплоносія 45-50С для уникнення руйнування стяжки/плитки. А от з регулюванням витратомірів були питання. Нижче спробую організувати інформацію з цього питання.</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2020/02/15/nalashtuvannya-vitratomiriv-teploi-pidlogi/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -567,190 +632,6 @@ To indicate hotfixes in version name I use patch segment alphabetic suffix</p>
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2014/10/30/continuous-deployment-and-feature-toggles/">Continuous Deployment and Feature Toggles</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2014-10-30
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#Development" title="Category: Development" rel="category">Development</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#Continuous+Delivery" title="Tag: Continuous Delivery" rel="tag">Continuous Delivery</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ul id="markdown-toc">
-  <li><a href="#continuous-delivery-vs-continuous-deployment" id="markdown-toc-continuous-delivery-vs-continuous-deployment">Continuous Delivery vs Continuous Deployment</a></li>
-  <li><a href="#levels-of-code-delivery-and-releases" id="markdown-toc-levels-of-code-delivery-and-releases">Levels of code delivery and releases</a></li>
-  <li><a href="#dark-launching" id="markdown-toc-dark-launching">Dark Launching</a></li>
-  <li><a href="#feature-toggles" id="markdown-toc-feature-toggles">Feature Toggles</a></li>
-</ul>
-
-<h2 id="continuous-delivery-vs-continuous-deployment">Continuous Delivery vs Continuous Deployment</h2>
-
-<p>Continuous Delivery includes automatic tests, code quality and errors checks. When all stages are passed code is released to production accorgin to business requirements. So business dictates when a build is deployed.</p>
-
-<p><strong>Drawbacks of continuous delivery approach</strong>:</p>
-
-<ul>
-  <li>scheduled downtimes</li>
-  <li>during “silence period” of no release we can cumulate a lot of changes which will be hard to release. This increase release time and possibility of random bugs on production</li>
-  <li>all changes appear to all customers immidiately and if some bug exists we will get storm of calls and emails and a very little time to rollback changes/make hotfix</li>
-</ul>
-
-<p>During release process you have to configure all new futures correctly and sometimes configuration error is catched too late.</p>
-
-<p>Imagegine we found some problem with released code. So what can cause it as all changes were tested and pass all delivery stages including automatical and manual testing?</p>
-
-<p>Here some <strong>examples of questions that can arise</strong>:</p>
-
-<ul>
-  <li>Is bug in one of numerous check-ins?</li>
-  <li>Missing unit tests?</li>
-  <li>Missing automated UA tests?</li>
-  <li>Missing manual UA tests?</li>
-  <li>Data out of sync?</li>
-  <li>Server configuration out of sync?</li>
-  <li>Capacity vs current load?</li>
-  <li>Deployment script?</li>
-</ul>
-
-<p><!--more--></p>
-
-<p><strong>Continuous Deployment difference to Continuous delivery</strong></p>
-
-<ul>
-  <li>every passing build is deployd to production (e.g. +30 deploys per day)</li>
-  <li>constantly integrating into production</li>
-  <li>all enhancements are gated by Config Flags (“dark” releases). Turning flags on, off, user list, 0-100%</li>
-  <li>validate in production, hidden from public</li>
-</ul>
-
-<p>Software Deploy ≠ Product Launch</p>
-
-<h2 id="levels-of-code-delivery-and-releases">Levels of code delivery and releases</h2>
-
-<p><strong>CD 100-200 LEVELS</strong></p>
-
-<ul>
-  <li>CI environment for automated tests</li>
-  <li>Commiting to trunk</li>
-  <li>Branching in code</li>
-  <li>Config flags (a.k.a feature flags)</li>
-  <li>Metrics and alerting</li>
-  <li>Automatic deploy script</li>
-</ul>
-
-<p><strong>CD 300 LEVEL</strong></p>
-
-<ul>
-  <li>Deploys vs releases</li>
-  <li>Decoupled systems, schema changes</li>
-  <li>Integration and Operations</li>
-</ul>
-
-<h2 id="dark-launching">Dark Launching</h2>
-
-<p>Term dark launching was coined by Facebook engineering team to simulate the new features in production environment well before release.</p>
-
-<blockquote>
-  <p>The secret for going from zero to seventy million users overnight is to avoid doing it all in one fell swoop. We chose to simulate the impact of many real users hitting many machines by means of a “dark launch” period in which Facebook pages would make connections to the chat servers, query for presence information and simulate message sends without a single UI element drawn on the page. With the “dark launch” bugs fixed, we hope that you enjoy Facebook Chat now that the UI lights have been turned on.</p>
-</blockquote>
-
-<h2 id="feature-toggles">Feature Toggles</h2>
-
-<p><strong>Feature toggles are used for dark Launching or phased rollout</strong>. Once latest version of application deployed we can toggle and expose a set of features to selected or all end-users.</p>
-
-<p><strong>Feature toggles can be also used for</strong>,</p>
-
-<ul>
-  <li>for avoiding branching and merging</li>
-  <li>experimenting such as A/B tests</li>
-  <li>putting unfinished code in production</li>
-  <li>reducing risk associated with large change</li>
-  <li>turning a resources heavy feature OFF in high load conditions</li>
-</ul>
-
-<p>According to Ross Harmes @ Flickr</p>
-
-<blockquote>
-  <p>Feature flags and flippers mean we don’t have to do merges, and that all code (no matter how far it is from being released) is integrated as soon as it is committed. Deploys become smaller and more frequent; this leads to bugs that are easier to fix, since we can catch them earlier and the amount of changed code is minimized.</p>
-</blockquote>
-
-<p>Martin Fowler’s explanation of feature toggle,</p>
-
-<blockquote>
-  <p>The basic idea is to have a configuration file that defines a bunch of toggles for various features you have pending. The running application then uses these toggles in order to decide whether or not to show the new feature.</p>
-</blockquote>
-
-<p><strong>Feature toggles in PHP</strong></p>
-
-<ul>
-  <li><a href="https://github.com/qandidate-labs/qandidate-toggle">Qandidate toggle</a></li>
-  <li><a href="http://github.com/marekkalnik/FeatureToggleBundle">FeatureToggle (Symfony)</a></li>
-</ul>
-
-<p><strong>Feature toggles in Ruby</strong></p>
-
-<ul>
-  <li><a href="http://github.com/pda/flip">Flip</a></li>
-  <li><a href="http://github.com/jamesgolick/rollout">Rollout</a></li>
-  <li><a href="http://github.com/jamesgolick/degrade">Degrade</a></li>
-</ul>
-
-<p><strong>Feature toggles in Python</strong></p>
-
-<ul>
-  <li><a href="http://github.com/disqus/gargoyle">Gargoyle (Django)</a></li>
-  <li><a href="http://github.com/jsocol/django-waffle">Django Waffle (Django)</a></li>
-  <li><a href="https://github.com/disqus/nexus">Nexus admin</a></li>
-</ul>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2014/10/30/continuous-deployment-and-feature-toggles/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -761,10 +642,10 @@ To indicate hotfixes in version name I use patch segment alphabetic suffix</p>
             <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
             <span class="previous disable"><i class="fa fa-angle-left"></i></span>
           
-          <span class="page_number ">1/1</span>
+          <span class="page_number ">1/2</span>
           
-            <span class="next disable"><i class="fa fa-angle-right"></i></span>
-            <span class="next disable"><i class="fa fa-angle-double-right"></i></span>
+            <a href="/page2" class="next"><i class="fa fa-angle-right"></i></a>
+            <a href="/page2" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -777,6 +658,8 @@ To indicate hotfixes in version name I use patch segment alphabetic suffix</p>
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2020/02/15/nalashtuvannya-vitratomiriv-teploi-pidlogi/">Налаштування витратомірів теплої підлоги</a></li>
                     
                         <li><a href="/2020/01/27/vykorystannya-pirometra-dlya-teploaudity/">Використання пірометру для теплоаудиту</a></li>
                     
@@ -815,7 +698,7 @@ To indicate hotfixes in version name I use patch segment alphabetic suffix</p>
                             <span class="name">
                                 Personal Life
                             </span>
-                            <span class="badge">3</span>
+                            <span class="badge">4</span>
                         </a>
                     </li>
                     
@@ -848,7 +731,7 @@ To indicate hotfixes in version name I use patch segment alphabetic suffix</p>
                       
                       
                       
-                      <a href="/tag/#Development Conventions" style="font-size: 13.5pt; color: #444;">Development Conventions</a>
+                      <a href="/tag/#Development Conventions" style="font-size: 12pt; color: #666;">Development Conventions</a>
                     
                       
                       
