@@ -118,6 +118,112 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2014/11/02/version-naming-convention-version-numbering/">Version naming convention (version numbering)</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2014-11-02
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Development" title="Category: Development" rel="category">Development</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#Development+Conventions" title="Tag: Development Conventions" rel="tag">Development Conventions</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#version-naming-convention" id="markdown-toc-version-naming-convention">Version naming convention</a></li>
+  <li><a href="#upgrading-the-software-version-on-applying-a-hotfix" id="markdown-toc-upgrading-the-software-version-on-applying-a-hotfix">Upgrading the software version on applying a hotfix</a></li>
+</ul>
+
+<p>According to development methodology you use periodicaly code changes are delivered to production and you make release.
+Release is point in time which you have to freeze for history. With git you can add tag for this, e.g.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git tag -a v0.0.1 -m "Release v0.0.1"
+git push origin v0.0.1
+</code></pre></div></div>
+
+<p>What do all this digits mean?</p>
+
+<h2 id="version-naming-convention">Version naming convention</h2>
+<p>I use <a href="http://semver.org/">semantic versioning</a>. This approach is popular (<a href="https://developers.google.com/java-dev-tools/wintester/html/installation/version_naming_convention">google</a>, <a href="https://wiki.eclipse.org/Version_Numbering">eclipse</a> etc.) and http://semver.org/.
+So version number contains 3 segments (versions): major, minor, patch:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>v0.0.1
+^ ^ ^
+| | |
+| | +--- Patch verion (Minor changes, bugfixes etc)
+| +----- Minor version (Added new huge functionality)
++------- Major version (Incompatible API changes)
+</code></pre></div></div>
+
+<p>When the major segment is changed the minor and patch segments are reset to 0.
+When the minor segment is changed the patch segment is reset to 0.</p>
+
+<p>So your releases list will look something like that</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git tag -l
+v0.0.1
+v0.0.2
+v0.0.3
+v0.1.0
+v0.1.1
+v1.0.0
+</code></pre></div></div>
+
+<h2 id="upgrading-the-software-version-on-applying-a-hotfix">Upgrading the software version on applying a hotfix</h2>
+<p>We leave in not an ideal world and sometimes event if your changes are good tested critical bugs appear on production. Such sort of critical bugs should be fixed as fast as possible, so you don’t have time to go through all development cycle stages. But this is not a reason to make manual changes on production.</p>
+
+<p>If you made appropriate changes to fix bug and commited changes to git (and to production) you should reflect this moment in versions history, i.e. add tag.
+To indicate hotfixes in version name I use patch segment alphabetic suffix</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>v0.0.1a
+</code></pre></div></div>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2014/11/02/version-naming-convention-version-numbering/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2014/10/30/continuous-deployment-and-feature-toggles/">Continuous Deployment and Feature Toggles</a>
                 </h2>
                 <div class="label">
@@ -327,6 +433,8 @@
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2020/02/15/rehuliuvannia-temperatury-batarei-i-teploi-pidlohy/">Регулювання температури батарей і теплої підлоги</a></li>
+                    
                         <li><a href="/2020/02/15/nalashtuvannya-vitratomiriv-teploi-pidlogi/">Налаштування витратомірів теплої підлоги</a></li>
                     
                         <li><a href="/2020/01/27/vykorystannya-pirometra-dlya-teploaudity/">Використання пірометру для теплоаудиту</a></li>
@@ -366,7 +474,7 @@
                             <span class="name">
                                 Personal Life
                             </span>
-                            <span class="badge">4</span>
+                            <span class="badge">5</span>
                         </a>
                     </li>
                     
@@ -399,7 +507,7 @@
                       
                       
                       
-                      <a href="/tag/#Development Conventions" style="font-size: 12pt; color: #666;">Development Conventions</a>
+                      <a href="/tag/#Development Conventions" style="font-size: 11.5pt; color: #777;">Development Conventions</a>
                     
                       
                       

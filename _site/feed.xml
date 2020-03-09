@@ -5,9 +5,28 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 15 Feb 2020 21:16:54 +0200</pubDate>
-    <lastBuildDate>Sat, 15 Feb 2020 21:16:54 +0200</lastBuildDate>
+    <pubDate>Mon, 09 Mar 2020 22:33:52 +0200</pubDate>
+    <lastBuildDate>Mon, 09 Mar 2020 22:33:52 +0200</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Регулювання температури батарей і теплої підлоги</title>
+        <description>
+Цей допис створено здебільшого для збереження інформації про моделі терморегуляторів, виставлення необхідного температурного режиму і нюансах використання.
+
+</description>
+        <pubDate>Sat, 15 Feb 2020 19:05:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/02/15/rehuliuvannia-temperatury-batarei-i-teploi-pidlohy/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/02/15/rehuliuvannia-temperatury-batarei-i-teploi-pidlohy/</guid>
+        
+        <category>Будівництво і ремонт</category>
+        
+        <category>Опалення</category>
+        
+        
+        <category>Personal Life</category>
+        
+      </item>
     
       <item>
         <title>Налаштування витратомірів теплої підлоги</title>
